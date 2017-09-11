@@ -1,0 +1,115 @@
+{{define "title"}}Create an Account{{end}}
+{{define "head"}}{{JS "//www.google.com/recaptcha/api.js"}}{{end}}
+{{define "content"}}
+	<div class="page-header">
+		<h1>{{template "title" .}}</h1>
+	</div>
+	
+	<form method="post">
+        <div class="form-group">
+            <label for="country">Страна</label>
+            <div><input {{TEXT "country" "" .}} type="text" class="form-control" id="country" maxlength="48" placeholder="Страна" /></div>
+        </div>
+        <div class="form-group">
+             <label for="registr_country">Страна Регистрации</label>
+             <div><input {{TEXT "registr_country" "" .}} type="text" class="form-control" id="registr_country" maxlength="48" placeholder="Страна Регистрации" /></div>
+         </div>
+        <div class="form-group">
+            <label for="comp_name">Название юридического лица</label>
+            <div><input {{TEXT "comp_name" "" .}} type="text" class="form-control" id="comp_name" maxlength="48" placeholder="Название юридического лица" /></div>
+        </div>
+        <div class="form-group">
+             <label for="edrp_ipn">Код ЕГРПОУ / ИНН</label>
+             <div><input {{TEXT "edrp_ipn" "" .}} type="text" class="form-control" id="edrp_ipn" maxlength="48" placeholder="Код ЕГРПОУ / ИНН" /></div>
+        </div>
+        <div class="form-group">
+             <label for="cash_manager">Распорядитель средств</label>
+             <div><input {{TEXT "cash_manager" "" .}} type="text" class="form-control" id="cash_manager" maxlength="48" placeholder="Распорядитель средств" /></div>
+         </div>
+        <div class="form-group">
+              <label for="customer_type">Тип Заказчика</label>
+              <div><input {{TEXT "customer_type" "" .}} type="text" class="form-control" id="customer_type" maxlength="48" placeholder="Тип Заказчика" /></div>
+        </div>
+        <div class="form-group">
+               <label for="fio">ФИО</label>
+               <div><input {{TEXT "fio" "" .}} type="text" class="form-control" id="fio" maxlength="48" placeholder="ФИО" /></div>
+        </div>
+        <div class="form-group">
+            <label for="position">Должность</label>
+            <div><input {{TEXT "position" "" .}} type="text" class="form-control" id="position" maxlength="48" placeholder="Должность" /></div>
+        </div>
+        <div class="form-group">
+            <label for="document">Документ, уполномочивает действовать от имени предприятия</label>
+            <div><input {{TEXT "document" "" .}} type="text" class="form-control" id="document" maxlength="48" placeholder="Документы" /></div>
+         </div>
+        <div class="form-group">
+            <label for="region">Регион / область</label>
+            <div><input {{TEXT "region" "" .}} type="text" class="form-control" id="region" maxlength="48" placeholder="Документы" /></div>
+        </div>
+        <div class="form-group">
+             <label for="city">Город</label>
+             <div><input {{TEXT "city" "" .}} type="text" class="form-control" id="city" maxlength="48" placeholder="Город" /></div>
+         </div>
+         <div class="form-group">
+             <label for="adress">Адрес</label>
+             <div><input {{TEXT "adress" "" .}} type="text" class="form-control" id="adress" maxlength="48" placeholder="Адрес" /></div>
+         </div>
+         <div class="form-group">
+             <label for="zip">Почтовый индекс</label>
+             <div><input {{TEXT "zip" "" .}} type="text" class="form-control" id="zip" maxlength="48" placeholder="Почтовый индекс" /></div>
+         </div>
+         <div class="form-group">
+             <label for="last_name">Фамилия</label>
+             <div><input {{TEXT "last_name" "" .}} type="text" class="form-control" id="last_name" maxlength="48" placeholder="Город" /></div>
+         </div>
+
+		<div class="form-group">
+			<label for="first_name">Имя</label>
+			<div><input {{TEXT "first_name" "" .}} type="text" class="form-control" id="first_name" maxlength="48" placeholder="First Name" /></div>
+		</div>
+		
+		<div class="form-group">
+			<label for="middle_name">Отчество</label>
+			<div><input {{TEXT "middle_name" "" .}} type="text" class="form-control" id="middle_name" maxlength="48" placeholder="Last Name" /></div>
+		</div>
+		
+		<div class="form-group">
+			<label for="email">Email</label>
+			<div><input {{TEXT "email" "" .}} type="email" class="form-control" id="email" maxlength="48" placeholder="Email" /></div>
+		</div>
+		<div class="form-group">
+            <label for="phone">Телефон</label>
+            <div><input {{TEXT "phone" "" .}} type="text" class="form-control" id="phone" maxlength="48" placeholder="Телефон" /></div>
+        </div>
+        <div class="form-group">
+            <label for="fax">Факс</label>
+            <div><input {{TEXT "fax" "" .}} type="text" class="form-control" id="fax" maxlength="48" placeholder="Факс" /></div>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Моб. телефон</label>
+            <div><input {{TEXT "mobile" "" .}} type="text" class="form-control" id="mobile" maxlength="48" placeholder="Моб. телефон" /></div>
+        </div>
+        <div class="form-group">
+            <label for="site">Сайт</label>
+            <div><input {{TEXT "site" "" .}} type="text" class="form-control" id="site" maxlength="48" placeholder="Город" /></div>
+        </div>
+		
+		<div class="form-group">
+			<label for="password">Password</label>
+			<div><input {{TEXT "password" "" .}} type="password" class="form-control" id="password" maxlength="48" placeholder="Password" /></div>
+		</div>
+		
+		<div class="form-group">
+			<label for="password_verify">Verify Password</label>
+			<div><input {{TEXT "password_verify" "" .}} type="password" class="form-control" id="password_verify" maxlength="48" placeholder="Verify Password" /></div>
+		</div>
+		
+		<input type="submit" value="Create Account" class="btn btn-primary" />
+		
+		<input type="hidden" name="_token" value="{{$.token}}">
+		<input type="hidden" name="_method" value="POST">
+	</form>
+	
+	{{template "footer" .}}
+{{end}}
+{{define "foot"}}{{end}}
